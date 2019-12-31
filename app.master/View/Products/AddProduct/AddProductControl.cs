@@ -41,6 +41,7 @@ namespace app.master.View.Products.AddProduct
             if (txbNameProduct.Text.Equals(NAMEPRODUCT))
             {
                 txbNameProduct.Clear();
+                txbNameProduct.ForeColor = Color.Purple;
             }
         }
 
@@ -49,6 +50,7 @@ namespace app.master.View.Products.AddProduct
             if (txbCodeProduct.Text.Equals(CODEPRODUCT))
             {
                 txbCodeProduct.Clear();
+                txbCodeProduct.ForeColor = Color.Purple;
             }
         }
 
@@ -65,10 +67,16 @@ namespace app.master.View.Products.AddProduct
         private void AddProductControl_Load(object sender, EventArgs e)
         {
             txbNameProduct.Text = NAMEPRODUCT;
+            txbNameProduct.ForeColor = Color.Gray;
             txbCodeProduct.Text = CODEPRODUCT;
+            txbCodeProduct.ForeColor = Color.Gray;
 
         }
 
-
+        private void btnCancelControl_Click(object sender, EventArgs e)
+        {
+            // this.SendToBack();
+            this.Parent.Controls.Remove(this);
+        }
     }
 }

@@ -73,6 +73,16 @@ namespace app.master.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _Back_Arrow_48 {
+            get {
+                object obj = ResourceManager.GetObject("_Back_Arrow_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_green {
             get {
                 object obj = ResourceManager.GetObject("add_green", resourceCulture);
@@ -156,6 +166,46 @@ namespace app.master.Properties {
         internal static System.Drawing.Bitmap New_Store_32 {
             get {
                 object obj = ResourceManager.GetObject("New_Store_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_Ticket_32 {
+            get {
+                object obj = ResourceManager.GetObject("New_Ticket_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_Ticket_48 {
+            get {
+                object obj = ResourceManager.GetObject("New_Ticket_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ok_48 {
+            get {
+                object obj = ResourceManager.GetObject("Ok_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ok_64 {
+            get {
+                object obj = ResourceManager.GetObject("Ok_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,27 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.btnNewProduct = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlProductsContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnNewProduct = new System.Windows.Forms.Button();
+            this.pnlContainer.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pnlContainer
+            // 
+            this.pnlContainer.Controls.Add(this.pnlProductsContainer);
+            this.pnlContainer.Controls.Add(this.pnlTop);
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(0, 0);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(860, 561);
+            this.pnlContainer.TabIndex = 0;
             // 
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.Purple;
             this.pnlTop.Controls.Add(this.btnNewProduct);
-            this.pnlTop.Controls.Add(this.label3);
-            this.pnlTop.Controls.Add(this.label2);
-            this.pnlTop.Controls.Add(this.label1);
+            this.pnlTop.Controls.Add(this.label4);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(860, 44);
+            this.pnlTop.Size = new System.Drawing.Size(860, 51);
             this.pnlTop.TabIndex = 0;
+            // 
+            // pnlProductsContainer
+            // 
+            this.pnlProductsContainer.AutoScroll = true;
+            this.pnlProductsContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlProductsContainer.Location = new System.Drawing.Point(0, 51);
+            this.pnlProductsContainer.Name = "pnlProductsContainer";
+            this.pnlProductsContainer.Size = new System.Drawing.Size(860, 510);
+            this.pnlProductsContainer.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(294, 51);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "TODOS MIS PRODUCTOS";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnNewProduct
             // 
@@ -58,84 +87,37 @@
             this.btnNewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewProduct.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewProduct.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnNewProduct.Image = global::app.master.Properties.Resources.New_Store_32;
-            this.btnNewProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewProduct.Location = new System.Drawing.Point(689, 3);
+            this.btnNewProduct.Image = global::app.master.Properties.Resources.New_Ticket_32;
+            this.btnNewProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewProduct.Location = new System.Drawing.Point(686, 7);
             this.btnNewProduct.Name = "btnNewProduct";
-            this.btnNewProduct.Size = new System.Drawing.Size(168, 38);
+            this.btnNewProduct.Size = new System.Drawing.Size(171, 38);
             this.btnNewProduct.TabIndex = 7;
             this.btnNewProduct.Text = "nuevo producto";
-            this.btnNewProduct.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewProduct.UseVisualStyleBackColor = false;
             this.btnNewProduct.Click += new System.EventHandler(this.btnNewProduct_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Crimson;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(434, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 21);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "SIN STOCK";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.PaleGreen;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Purple;
-            this.label2.Location = new System.Drawing.Point(323, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 21);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "DISPONIBLES";
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 44);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "TODOS MIS PRODUCTOS";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pnlProductsContainer
-            // 
-            this.pnlProductsContainer.AutoScroll = true;
-            this.pnlProductsContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlProductsContainer.Location = new System.Drawing.Point(0, 44);
-            this.pnlProductsContainer.Name = "pnlProductsContainer";
-            this.pnlProductsContainer.Size = new System.Drawing.Size(860, 517);
-            this.pnlProductsContainer.TabIndex = 1;
             // 
             // ProductControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pnlProductsContainer);
-            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.pnlContainer);
             this.Name = "ProductControl";
             this.Size = new System.Drawing.Size(860, 561);
             this.Load += new System.EventHandler(this.ProductControl_Load);
+            this.pnlContainer.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
-            this.pnlTop.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlTop;
+        private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.FlowLayoutPanel pnlProductsContainer;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Button btnNewProduct;
+        private System.Windows.Forms.Label label4;
     }
 }

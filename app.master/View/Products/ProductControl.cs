@@ -8,6 +8,7 @@ using app.master.models;
 using app.master.Model;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using app.master.View.Products.AddProduct;
 
 namespace app.master.View.Products
 {
@@ -26,13 +27,23 @@ namespace app.master.View.Products
             get { return _ProductItems; }
             set { _ProductItems = value;}
         }
+        private static AddProductControl _instanceAddProductControl;
+        public static AddProductControl InstanceAddProductControl
+        {
+            get
+            {
+                if (_instanceAddProductControl == null)
+                    _instanceAddProductControl = new AddProductControl();
+                return _instanceAddProductControl;
+            }
+        }
 
         private void ProductControl_Load(object sender, EventArgs e)
         {
             PopulateItems();
         }
 
-        private void PopulateItems()
+        public void PopulateItems()
         {
             List<ItemListControl> ListItems = new List<ItemListControl>();
             List<Product> ListProducts = this.ProductItems;
@@ -72,7 +83,12 @@ namespace app.master.View.Products
 
         private void btnNewProduct_Click(object sender, EventArgs e)
         {
-            // AddProductControl.Visible = true;
+            pnlProductsContainer.Controls.Clear();
+            AddProductControl addProduct = new AddProductControl();
+            //pnlProductsContainer.Controls.Add(addProduct);
+            addProduct.BringToFront();
+            pnlContainer.Controls.Add(InstanceAddProductControl);
+            InstanceAddProductControl.BringToFront();
         }
     }
 }

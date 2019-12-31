@@ -170,6 +170,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>appDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\New_Ticket_32.png" />
+    <None Include="Resources\New_Ticket_48.png" />
+    <None Include="Resources\_Back_Arrow_48.png" />
+    <None Include="Resources\Ok_48.png" />
+    <None Include="Resources\Ok_64.png" />
     <None Include="Resources\New_Store_32.png" />
     <None Include="Resources\default-product.png" />
     <None Include="Resources\Back_Arrow_32.png" />
