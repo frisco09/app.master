@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.btnNewProduct = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.Purple;
+            this.pnlTop.Controls.Add(this.btnNewProduct);
             this.pnlTop.Controls.Add(this.label3);
             this.pnlTop.Controls.Add(this.label2);
             this.pnlTop.Controls.Add(this.label1);
@@ -48,13 +50,32 @@
             this.pnlTop.Size = new System.Drawing.Size(860, 44);
             this.pnlTop.TabIndex = 0;
             // 
+            // btnNewProduct
+            // 
+            this.btnNewProduct.BackColor = System.Drawing.Color.Purple;
+            this.btnNewProduct.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnNewProduct.FlatAppearance.BorderSize = 0;
+            this.btnNewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewProduct.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewProduct.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNewProduct.Image = global::app.master.Properties.Resources.New_Store_32;
+            this.btnNewProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewProduct.Location = new System.Drawing.Point(689, 3);
+            this.btnNewProduct.Name = "btnNewProduct";
+            this.btnNewProduct.Size = new System.Drawing.Size(168, 38);
+            this.btnNewProduct.TabIndex = 7;
+            this.btnNewProduct.Text = "nuevo producto";
+            this.btnNewProduct.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewProduct.UseVisualStyleBackColor = false;
+            this.btnNewProduct.Click += new System.EventHandler(this.btnNewProduct_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Crimson;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(755, 13);
+            this.label3.Location = new System.Drawing.Point(434, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 6;
@@ -66,7 +87,7 @@
             this.label2.BackColor = System.Drawing.Color.PaleGreen;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Purple;
-            this.label2.Location = new System.Drawing.Point(644, 13);
+            this.label2.Location = new System.Drawing.Point(323, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 21);
             this.label2.TabIndex = 5;
@@ -79,10 +100,10 @@
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 44);
+            this.label1.Size = new System.Drawing.Size(294, 44);
             this.label1.TabIndex = 4;
             this.label1.Text = "TODOS MIS PRODUCTOS";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlProductsContainer
             // 
@@ -115,5 +136,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnNewProduct;
     }
 }

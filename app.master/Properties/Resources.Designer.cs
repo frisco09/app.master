@@ -93,9 +93,29 @@ namespace app.master.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Back_Arrow_32 {
+            get {
+                object obj = ResourceManager.GetObject("Back_Arrow_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Brainstorm_Skill_64 {
             get {
                 object obj = ResourceManager.GetObject("Brainstorm_Skill_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap default_product {
+            get {
+                object obj = ResourceManager.GetObject("default-product", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,16 @@ namespace app.master.Properties {
         internal static System.Drawing.Bitmap food_pattern_background {
             get {
                 object obj = ResourceManager.GetObject("food-pattern-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_Store_32 {
+            get {
+                object obj = ResourceManager.GetObject("New_Store_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

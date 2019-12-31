@@ -94,6 +94,12 @@
     <Compile Include="View\Orders\OrderControl.Designer.cs">
       <DependentUpon>OrderControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Products\AddProduct\AddProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Products\AddProduct\AddProductControl.Designer.cs">
+      <DependentUpon>AddProductControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Products\ItemListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="View\Orders\OrderControl.resx">
       <DependentUpon>OrderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Products\AddProduct\AddProductControl.resx">
+      <DependentUpon>AddProductControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Products\ItemListControl.resx">
       <DependentUpon>ItemListControl.cs</DependentUpon>
@@ -161,6 +170,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>appDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\New_Store_32.png" />
+    <None Include="Resources\default-product.png" />
+    <None Include="Resources\Back_Arrow_32.png" />
     <None Include="Resources\Edit_Property_32.png" />
     <None Include="Resources\Add_Plus_32.png" />
     <None Include="Resources\add_green.png" />

@@ -62,9 +62,17 @@ namespace app.master.View.Products
         }
 
 
-        private void GetProducts()
+        private void ConfigureBtnAddProduct()
         {
+            if (btnNewProduct.Visible)
+            {
 
+            }
+        }
+
+        private void btnNewProduct_Click(object sender, EventArgs e)
+        {
+            // AddProductControl.Visible = true;
         }
     }
 }
