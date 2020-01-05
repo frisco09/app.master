@@ -33,9 +33,10 @@
             this.txbNameProduct = new System.Windows.Forms.MaskedTextBox();
             this.gbxData = new System.Windows.Forms.GroupBox();
             this.lblAddImage = new System.Windows.Forms.Label();
+            this.pbImageProduct = new System.Windows.Forms.PictureBox();
             this.txbCodeProduct = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.nudQuantityUnit = new System.Windows.Forms.NumericUpDown();
             this.nudUnitStock = new System.Windows.Forms.NumericUpDown();
             this.nudUnitOrder = new System.Windows.Forms.NumericUpDown();
@@ -44,18 +45,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddProduct = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancelControl = new System.Windows.Forms.Button();
-            this.pbImageProduct = new System.Windows.Forms.PictureBox();
+            this.nudProductPrice = new System.Windows.Forms.NumericUpDown();
+            this.cbxCategories = new System.Windows.Forms.ComboBox();
             this.pnlTop.SuspendLayout();
             this.gbxData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageProduct)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantityUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUnitStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUnitOrder)).BeginInit();
             this.pnlFooter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImageProduct)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProductPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +88,7 @@
             // 
             // txbNameProduct
             // 
-            this.txbNameProduct.BackColor = System.Drawing.Color.MediumPurple;
+            this.txbNameProduct.BackColor = System.Drawing.Color.Lavender;
             this.txbNameProduct.Location = new System.Drawing.Point(6, 32);
             this.txbNameProduct.Name = "txbNameProduct";
             this.txbNameProduct.Size = new System.Drawing.Size(594, 33);
@@ -92,6 +98,8 @@
             // 
             // gbxData
             // 
+            this.gbxData.BackColor = System.Drawing.Color.LavenderBlush;
+            this.gbxData.Controls.Add(this.cbxCategories);
             this.gbxData.Controls.Add(this.lblAddImage);
             this.gbxData.Controls.Add(this.pbImageProduct);
             this.gbxData.Controls.Add(this.txbCodeProduct);
@@ -115,9 +123,19 @@
             this.lblAddImage.TabIndex = 8;
             this.lblAddImage.Text = "*click para agregar imagen del producto";
             // 
+            // pbImageProduct
+            // 
+            this.pbImageProduct.Image = global::app.master.Properties.Resources.default_product;
+            this.pbImageProduct.Location = new System.Drawing.Point(606, 23);
+            this.pbImageProduct.Name = "pbImageProduct";
+            this.pbImageProduct.Size = new System.Drawing.Size(230, 181);
+            this.pbImageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImageProduct.TabIndex = 7;
+            this.pbImageProduct.TabStop = false;
+            // 
             // txbCodeProduct
             // 
-            this.txbCodeProduct.BackColor = System.Drawing.Color.MediumPurple;
+            this.txbCodeProduct.BackColor = System.Drawing.Color.Lavender;
             this.txbCodeProduct.Location = new System.Drawing.Point(6, 71);
             this.txbCodeProduct.Name = "txbCodeProduct";
             this.txbCodeProduct.Size = new System.Drawing.Size(594, 33);
@@ -127,7 +145,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown8);
+            this.groupBox1.Controls.Add(this.nudProductPrice);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.nudQuantityUnit);
             this.groupBox1.Controls.Add(this.nudUnitStock);
             this.groupBox1.Controls.Add(this.nudUnitOrder);
@@ -143,19 +162,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock y facturacion";
             // 
-            // numericUpDown8
+            // label2
             // 
-            this.numericUpDown8.BackColor = System.Drawing.Color.MediumPurple;
-            this.numericUpDown8.Location = new System.Drawing.Point(501, 75);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(255, 33);
-            this.numericUpDown8.TabIndex = 15;
-            this.numericUpDown8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown8.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.label2.Image = global::app.master.Properties.Resources.purple_currency_32;
+            this.label2.Location = new System.Drawing.Point(531, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 33);
+            this.label2.TabIndex = 17;
             // 
             // nudQuantityUnit
             // 
-            this.nudQuantityUnit.BackColor = System.Drawing.Color.MediumPurple;
+            this.nudQuantityUnit.BackColor = System.Drawing.Color.Lavender;
             this.nudQuantityUnit.Location = new System.Drawing.Point(164, 70);
             this.nudQuantityUnit.Name = "nudQuantityUnit";
             this.nudQuantityUnit.Size = new System.Drawing.Size(152, 33);
@@ -165,7 +182,7 @@
             // 
             // nudUnitStock
             // 
-            this.nudUnitStock.BackColor = System.Drawing.Color.MediumPurple;
+            this.nudUnitStock.BackColor = System.Drawing.Color.Lavender;
             this.nudUnitStock.Location = new System.Drawing.Point(164, 31);
             this.nudUnitStock.Name = "nudUnitStock";
             this.nudUnitStock.Size = new System.Drawing.Size(152, 33);
@@ -175,7 +192,7 @@
             // 
             // nudUnitOrder
             // 
-            this.nudUnitOrder.BackColor = System.Drawing.Color.MediumPurple;
+            this.nudUnitOrder.BackColor = System.Drawing.Color.Lavender;
             this.nudUnitOrder.Location = new System.Drawing.Point(164, 109);
             this.nudUnitOrder.Maximum = new decimal(new int[] {
             1000,
@@ -214,7 +231,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label5.Location = new System.Drawing.Point(554, 42);
+            this.label5.Location = new System.Drawing.Point(635, 36);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 30);
             this.label5.TabIndex = 5;
@@ -232,63 +249,102 @@
             // 
             // pnlFooter
             // 
-            this.pnlFooter.Controls.Add(this.btnAddProduct);
-            this.pnlFooter.Controls.Add(this.btnCancelControl);
+            this.pnlFooter.Controls.Add(this.flowLayoutPanel1);
+            this.pnlFooter.Controls.Add(this.panel1);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Location = new System.Drawing.Point(0, 479);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(860, 82);
             this.pnlFooter.TabIndex = 9;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Purple;
+            this.flowLayoutPanel1.Controls.Add(this.btnAddProduct);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(430, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(430, 82);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
             // btnAddProduct
             // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.Indigo;
-            this.btnAddProduct.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAddProduct.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddProduct.FlatAppearance.BorderSize = 0;
             this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddProduct.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.ForeColor = System.Drawing.Color.Lavender;
             this.btnAddProduct.Image = global::app.master.Properties.Resources.Ok_48;
             this.btnAddProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAddProduct.Location = new System.Drawing.Point(430, 0);
+            this.btnAddProduct.Location = new System.Drawing.Point(3, 3);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(430, 82);
+            this.btnAddProduct.Size = new System.Drawing.Size(424, 76);
             this.btnAddProduct.TabIndex = 10;
             this.btnAddProduct.Text = "AGREGAR";
             this.btnAddProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Indigo;
+            this.panel1.Controls.Add(this.btnCancelControl);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(430, 82);
+            this.panel1.TabIndex = 0;
             // 
             // btnCancelControl
             // 
-            this.btnCancelControl.BackColor = System.Drawing.Color.BlueViolet;
-            this.btnCancelControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCancelControl.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelControl.FlatAppearance.BorderSize = 0;
             this.btnCancelControl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelControl.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelControl.ForeColor = System.Drawing.Color.Lavender;
             this.btnCancelControl.Image = global::app.master.Properties.Resources._Back_Arrow_48;
             this.btnCancelControl.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelControl.Location = new System.Drawing.Point(0, 0);
+            this.btnCancelControl.Location = new System.Drawing.Point(3, 3);
             this.btnCancelControl.Name = "btnCancelControl";
-            this.btnCancelControl.Size = new System.Drawing.Size(430, 82);
+            this.btnCancelControl.Size = new System.Drawing.Size(424, 76);
             this.btnCancelControl.TabIndex = 9;
             this.btnCancelControl.Text = "CANCELAR";
             this.btnCancelControl.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCancelControl.UseVisualStyleBackColor = false;
             this.btnCancelControl.Click += new System.EventHandler(this.btnCancelControl_Click);
             // 
-            // pbImageProduct
+            // nudProductPrice
             // 
-            this.pbImageProduct.Image = global::app.master.Properties.Resources.default_product;
-            this.pbImageProduct.Location = new System.Drawing.Point(606, 23);
-            this.pbImageProduct.Name = "pbImageProduct";
-            this.pbImageProduct.Size = new System.Drawing.Size(230, 181);
-            this.pbImageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImageProduct.TabIndex = 7;
-            this.pbImageProduct.TabStop = false;
+            this.nudProductPrice.BackColor = System.Drawing.Color.Lavender;
+            this.nudProductPrice.DecimalPlaces = 2;
+            this.nudProductPrice.Location = new System.Drawing.Point(568, 107);
+            this.nudProductPrice.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudProductPrice.Name = "nudProductPrice";
+            this.nudProductPrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.nudProductPrice.Size = new System.Drawing.Size(268, 33);
+            this.nudProductPrice.TabIndex = 18;
+            this.nudProductPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudProductPrice.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            // 
+            // cbxCategories
+            // 
+            this.cbxCategories.BackColor = System.Drawing.Color.Lavender;
+            this.cbxCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCategories.FormattingEnabled = true;
+            this.cbxCategories.Location = new System.Drawing.Point(7, 110);
+            this.cbxCategories.Name = "cbxCategories";
+            this.cbxCategories.Size = new System.Drawing.Size(593, 33);
+            this.cbxCategories.TabIndex = 3;
             // 
             // AddProductControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxData);
@@ -299,14 +355,16 @@
             this.pnlTop.ResumeLayout(false);
             this.gbxData.ResumeLayout(false);
             this.gbxData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageProduct)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantityUnit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUnitStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUnitOrder)).EndInit();
             this.pnlFooter.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbImageProduct)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudProductPrice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,7 +378,6 @@
         private System.Windows.Forms.MaskedTextBox txbCodeProduct;
         private System.Windows.Forms.PictureBox pbImageProduct;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
         private System.Windows.Forms.NumericUpDown nudQuantityUnit;
         private System.Windows.Forms.NumericUpDown nudUnitStock;
         private System.Windows.Forms.NumericUpDown nudUnitOrder;
@@ -332,5 +389,10 @@
         private System.Windows.Forms.Button btnCancelControl;
         private System.Windows.Forms.Panel pnlFooter;
         private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nudProductPrice;
+        private System.Windows.Forms.ComboBox cbxCategories;
     }
 }
