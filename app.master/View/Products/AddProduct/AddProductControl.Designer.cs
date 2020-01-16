@@ -231,7 +231,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label5.Location = new System.Drawing.Point(635, 36);
+            this.label5.Location = new System.Drawing.Point(629, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 30);
             this.label5.TabIndex = 5;

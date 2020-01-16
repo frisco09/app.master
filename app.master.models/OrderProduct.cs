@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace app.master.models
 {
-    public partial class OrderProduct
+    public partial class OrderProduct : EntityBase
     {
         public double UnitPrice { get; set; }
         public double Discount { get; set; }
@@ -16,9 +16,5 @@ namespace app.master.models
 
         public int ProductId { get; set; }
         public Product Product { get; set; }
-
-        public DateTime? CreateAt { get; set; }
-        public DateTime? UpdateAt { get; set; }
-        public DateTime? DeleteAt { get; set; }
     }
 }

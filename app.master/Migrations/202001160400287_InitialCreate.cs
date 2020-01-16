@@ -14,9 +14,14 @@
                         CategoryId = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         Description = c.String(),
-                        CreateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        UpdateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        DeleteAt = c.DateTime(precision: 7, storeType: "datetime2"),
+                        CreatorUserId = c.Long(),
+                        CreationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        LastModifierUserId = c.Long(),
+                        LastModificationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        IsDeleted = c.Boolean(nullable: false),
+                        IsActive = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.CategoryId);
             
@@ -26,9 +31,14 @@
                     {
                         CategoryId = c.Int(nullable: false),
                         ProductId = c.Int(nullable: false),
-                        CreateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        UpdateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        DeleteAt = c.DateTime(precision: 7, storeType: "datetime2"),
+                        CreatorUserId = c.Long(),
+                        CreationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        LastModifierUserId = c.Long(),
+                        LastModificationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        IsDeleted = c.Boolean(nullable: false),
+                        IsActive = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => new { t.CategoryId, t.ProductId })
                 .ForeignKey("dbo.Category", t => t.CategoryId, cascadeDelete: true)
@@ -48,9 +58,14 @@
                         UnitInStock = c.Int(nullable: false),
                         UnitOrders = c.Int(),
                         Discontinued = c.Boolean(nullable: false),
-                        CreateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        UpdateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        DeleteAt = c.DateTime(precision: 7, storeType: "datetime2"),
+                        CreatorUserId = c.Long(),
+                        CreationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        LastModifierUserId = c.Long(),
+                        LastModificationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        IsDeleted = c.Boolean(nullable: false),
+                        IsActive = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ProductId);
             
@@ -62,9 +77,14 @@
                         ProductId = c.Int(nullable: false),
                         UnitPrice = c.Double(nullable: false),
                         Discount = c.Double(nullable: false),
-                        CreateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        UpdateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        DeleteAt = c.DateTime(precision: 7, storeType: "datetime2"),
+                        CreatorUserId = c.Long(),
+                        CreationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        LastModifierUserId = c.Long(),
+                        LastModificationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        IsDeleted = c.Boolean(nullable: false),
+                        IsActive = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => new { t.OrderId, t.ProductId })
                 .ForeignKey("dbo.Order", t => t.OrderId, cascadeDelete: true)
@@ -82,9 +102,14 @@
                         ShipVia = c.String(),
                         ShipAdress = c.String(nullable: false, unicode: false, storeType: "text"),
                         State = c.String(),
-                        CreateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        UpdateAt = c.DateTime(precision: 7, storeType: "datetime2"),
-                        DeleteAt = c.DateTime(precision: 7, storeType: "datetime2"),
+                        CreatorUserId = c.Long(),
+                        CreationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        LastModifierUserId = c.Long(),
+                        LastModificationTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(precision: 7, storeType: "datetime2"),
+                        IsDeleted = c.Boolean(nullable: false),
+                        IsActive = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.OrderId);
             

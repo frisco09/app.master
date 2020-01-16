@@ -21,20 +21,20 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
             context.Product.AddOrUpdate(
-                new Product { ProductId = 1, Name = "Milanesa napolitana", UnitPrice = 0, Code = "PR01", CreateAt = DateTime.Now },
-                new Product { ProductId = 2, Name = "Hamburguesa simple", UnitPrice = 0, Code = "PR02", CreateAt = DateTime.Now },
-                new Product { ProductId = 3, Name = "Sanguche de vacio", UnitPrice = 0, Code = "PR03", CreateAt = DateTime.Now },
-                new Product { ProductId = 4, Name = "Lomito de ternera", UnitPrice = 0, Code = "PR04", CreateAt = DateTime.Now },
-                new Product { ProductId = 5, Name = "Ensalada rusa", UnitPrice = 0, Code = "PR05", CreateAt = DateTime.Now },
-                new Product { ProductId = 6, Name = "Jugo de naranja", UnitPrice = 0, Code = "PR06", CreateAt = DateTime.Now },
-                new Product { ProductId = 7, Name = "Manaos 5 lts", UnitPrice = 0, Code = "PR07", CreateAt = DateTime.Now }
+                new Product { ProductId = 1, Name = "Milanesa napolitana", UnitPrice = 0, Code = "PR01", CreationTime = DateTime.Now },
+                new Product { ProductId = 2, Name = "Hamburguesa simple", UnitPrice = 0, Code = "PR02", CreationTime = DateTime.Now },
+                new Product { ProductId = 3, Name = "Sanguche de vacio", UnitPrice = 0, Code = "PR03", CreationTime = DateTime.Now },
+                new Product { ProductId = 4, Name = "Lomito de ternera", UnitPrice = 0, Code = "PR04", CreationTime = DateTime.Now },
+                new Product { ProductId = 5, Name = "Ensalada rusa", UnitPrice = 0, Code = "PR05", CreationTime = DateTime.Now },
+                new Product { ProductId = 6, Name = "Jugo de naranja", UnitPrice = 0, Code = "PR06", CreationTime = DateTime.Now },
+                new Product { ProductId = 7, Name = "Manaos 5 lts", UnitPrice = 0, Code = "PR07", CreationTime = DateTime.Now }
             );
 
             context.Order.AddOrUpdate(
-                new Order { OrderId = 1, OrderDate = DateTime.Now, ShipAdress = "st 199 br 01", CreateAt = DateTime.Now },
-                new Order { OrderId = 2, OrderDate = DateTime.Now, ShipAdress = "st 100 br 01", CreateAt = DateTime.Now },
-                new Order { OrderId = 3, OrderDate = DateTime.Now, ShipAdress = "st 045 br 02", CreateAt = DateTime.Now },
-                new Order { OrderId = 4, OrderDate = DateTime.Now, ShipAdress = "st 234 br 11", CreateAt = DateTime.Now }
+                new Order { OrderId = 1, OrderDate = DateTime.Now, ShipAdress = "st 199 br 01", CreationTime = DateTime.Now },
+                new Order { OrderId = 2, OrderDate = DateTime.Now, ShipAdress = "st 100 br 01", CreationTime = DateTime.Now },
+                new Order { OrderId = 3, OrderDate = DateTime.Now, ShipAdress = "st 045 br 02", CreationTime = DateTime.Now },
+                new Order { OrderId = 4, OrderDate = DateTime.Now, ShipAdress = "st 234 br 11", CreationTime = DateTime.Now }
             );
 
             context.Category.AddOrUpdate(

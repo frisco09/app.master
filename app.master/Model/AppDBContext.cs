@@ -48,15 +48,15 @@ namespace app.master.Model
                 .Property(x => x.UnitOrders)
                 .IsOptional();
             modelBuilder.Entity<Product>()
-                .Property(x => x.CreateAt)
+                .Property(x => x.CreationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<Product>()
-                .Property(x => x.UpdateAt)
+                .Property(x => x.LastModificationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<Product>()
-                .Property(x => x.DeleteAt)
+                .Property(x => x.DeletionTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             #endregion
@@ -82,30 +82,30 @@ namespace app.master.Model
                 .Property(x => x.State)
                 .IsOptional();
             modelBuilder.Entity<Order>()
-                .Property(x => x.CreateAt)
+                .Property(x => x.CreationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<Order>()
-                .Property(x => x.UpdateAt)
+                .Property(x => x.LastModificationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<Order>()
-                .Property(x => x.DeleteAt)
+                .Property(x => x.DeletionTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             #endregion
 
             #region OrderProduct
             modelBuilder.Entity<OrderProduct>()
-                .Property(x => x.CreateAt)
+                .Property(x => x.CreationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<OrderProduct>()
-                .Property(x => x.UpdateAt)
+                .Property(x => x.LastModificationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<OrderProduct>()
-                .Property(x => x.DeleteAt)
+                .Property(x => x.DeletionTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<OrderProduct>()
@@ -114,30 +114,30 @@ namespace app.master.Model
 
             #region Category
             modelBuilder.Entity<Category>()
-                .Property(x => x.CreateAt)
+                .Property(x => x.CreationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<Category>()
-                .Property(x => x.UpdateAt)
+                .Property(x => x.LastModificationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<Category>()
-                .Property(x => x.DeleteAt)
+                .Property(x => x.DeletionTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             #endregion
 
             #region ProductCategory
             modelBuilder.Entity<ProductCategory>()
-                .Property(x => x.CreateAt)
+                .Property(x => x.CreationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<ProductCategory>()
-                .Property(x => x.UpdateAt)
+                .Property(x => x.LastModificationTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<ProductCategory>()
-                .Property(x => x.DeleteAt)
+                .Property(x => x.DeletionTime)
                 .HasColumnType("datetime2")
                 .IsOptional();
             modelBuilder.Entity<ProductCategory>()
