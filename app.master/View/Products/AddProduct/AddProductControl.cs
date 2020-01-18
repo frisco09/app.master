@@ -25,10 +25,31 @@ namespace app.master.View.Products.AddProduct
         Product _product = new Product();
         Category _category = new Category();
         List<Category> _categories = new List<Category>();
+        ProductControl parentForm;
 
         public AddProductControl()
         {
             InitializeComponent();
+
+            foreach (Control c in this.Controls)
+            {
+                if (c == null)
+                {
+                    throw new ArgumentNullException("c");
+                }
+                if (c is TextBox)
+                {
+                    (c as TextBox).Clear();
+                }
+                else if (c is ComboBox)
+                {
+                    (c as ComboBox).SelectedIndex = 1;
+                }
+                else if (c is NumericUpDown)
+                {
+                    (c as NumericUpDown).Value = 0;
+                }
+            }
         }
 
 
@@ -128,9 +149,12 @@ namespace app.master.View.Products.AddProduct
 
 
             }
-
-            // PopGridView();
+            this.Parent.Controls.Remove(this);
         }
+
+
+
 
     }
 }
+

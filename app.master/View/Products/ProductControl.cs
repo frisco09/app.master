@@ -17,7 +17,7 @@ namespace app.master.View.Products
         public ProductControl()
         {
             InitializeComponent();
-            
+            PopulateItems();
         }
         public List<Product> _ProductItems;
 
@@ -47,26 +47,28 @@ namespace app.master.View.Products
         {
             List<ItemListControl> ListItems = new List<ItemListControl>();
             List<Product> ListProducts = this.ProductItems;
-
-            if (ListProducts.Count > 0)
+            if (ListProducts != null)
             {
-                foreach (var product in this.ProductItems)
+                if (ListProducts.Count > 0)
                 {
-                    ItemListControl item = new ItemListControl();
-                    item.Name = product.Name;
-                    item.Stock = product.UnitInStock;
-                    item.Price = product.UnitPrice;
-                    if (product.Categories.Count > 0)
+                    foreach (var product in this.ProductItems)
                     {
-                        List<int> categoriesIDS = new List<int>();
-                        foreach (var i in product.Categories)
+                        ItemListControl item = new ItemListControl();
+                        item.Name = product.Name;
+                        item.Stock = product.UnitInStock;
+                        item.Price = product.UnitPrice;
+                        if (product.Categories.Count > 0)
                         {
-                            categoriesIDS.Add(i.CategoryId);
+                            List<int> categoriesIDS = new List<int>();
+                            foreach (var i in product.Categories)
+                            {
+                                categoriesIDS.Add(i.CategoryId);
+                            }
+                            item.Categories = categoriesIDS;
                         }
-                        item.Categories = categoriesIDS;
-                    }
                     
-                    pnlProductsContainer.Controls.Add(item);
+                        pnlProductsContainer.Controls.Add(item);
+                    }
                 }
             }
 
@@ -84,11 +86,13 @@ namespace app.master.View.Products
         private void btnNewProduct_Click(object sender, EventArgs e)
         {
             pnlProductsContainer.Controls.Clear();
-            AddProductControl addProduct = new AddProductControl();
-            //pnlProductsContainer.Controls.Add(addProduct);
-            addProduct.BringToFront();
+            //AddProductControl addProduct = new AddProductControl();
+            ////pnlProductsContainer.Controls.Add(addProduct);
+            //addProduct.BringToFront();
+            _instanceAddProductControl = null;
             pnlContainer.Controls.Add(InstanceAddProductControl);
             InstanceAddProductControl.BringToFront();
+            PopulateItems();
         }
     }
 }
