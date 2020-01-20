@@ -273,6 +273,16 @@ namespace app.master.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Synchronize_32 {
+            get {
+                object obj = ResourceManager.GetObject("Synchronize_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tools_48 {
             get {
                 object obj = ResourceManager.GetObject("Tools_48", resourceCulture);

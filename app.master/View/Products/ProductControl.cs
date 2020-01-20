@@ -45,29 +45,36 @@ namespace app.master.View.Products
 
         public void PopulateItems()
         {
-            List<ItemListControl> ListItems = new List<ItemListControl>();
-            List<Product> ListProducts = this.ProductItems;
-            if (ListProducts != null)
+            using (var MyModelEntities = new AppDBContext())
             {
-                if (ListProducts.Count > 0)
+
+                pnlProductsContainer.Controls.Clear();
+                _ProductItems = new List<Product>();
+                _ProductItems.Clear();
+                _ProductItems = MyModelEntities.Product.Include("Categories").OrderByDescending(pr => pr.ProductId).ToList();
+            
+                if (_ProductItems != null)
                 {
-                    foreach (var product in this.ProductItems)
-                    {
-                        ItemListControl item = new ItemListControl();
-                        item.Name = product.Name;
-                        item.Stock = product.UnitInStock;
-                        item.Price = product.UnitPrice;
-                        if (product.Categories.Count > 0)
+                    if (_ProductItems.Count > 0)
                         {
-                            List<int> categoriesIDS = new List<int>();
-                            foreach (var i in product.Categories)
-                            {
-                                categoriesIDS.Add(i.CategoryId);
-                            }
-                            item.Categories = categoriesIDS;
-                        }
+                        foreach (var product in _ProductItems)
+                        {
+                           ItemListControl item = new ItemListControl();
+                           item.Name = product.Name;
+                           item.Stock = product.UnitInStock;
+                           item.Price = product.UnitPrice;
+                           if (product.Categories.Count > 0)
+                           {
+                               List<int> categoriesIDS = new List<int>();
+                               foreach (var i in product.Categories)
+                               {
+                                   categoriesIDS.Add(i.CategoryId);
+                               }
+                               item.Categories = categoriesIDS;
+                           }
                     
-                        pnlProductsContainer.Controls.Add(item);
+                              pnlProductsContainer.Controls.Add(item);
+                        }
                     }
                 }
             }
@@ -92,6 +99,11 @@ namespace app.master.View.Products
             _instanceAddProductControl = null;
             pnlContainer.Controls.Add(InstanceAddProductControl);
             InstanceAddProductControl.BringToFront();
+            PopulateItems();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
             PopulateItems();
         }
     }

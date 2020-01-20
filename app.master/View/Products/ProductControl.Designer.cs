@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlProductsContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlTop = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnNewProduct = new System.Windows.Forms.Button();
             this.pnlContainer.SuspendLayout();
             this.pnlTop.SuspendLayout();
@@ -47,17 +48,6 @@
             this.pnlContainer.Size = new System.Drawing.Size(860, 561);
             this.pnlContainer.TabIndex = 0;
             // 
-            // pnlTop
-            // 
-            this.pnlTop.BackColor = System.Drawing.Color.Purple;
-            this.pnlTop.Controls.Add(this.btnNewProduct);
-            this.pnlTop.Controls.Add(this.label4);
-            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(860, 51);
-            this.pnlTop.TabIndex = 0;
-            // 
             // pnlProductsContainer
             // 
             this.pnlProductsContainer.AutoScroll = true;
@@ -66,6 +56,18 @@
             this.pnlProductsContainer.Name = "pnlProductsContainer";
             this.pnlProductsContainer.Size = new System.Drawing.Size(860, 510);
             this.pnlProductsContainer.TabIndex = 2;
+            // 
+            // pnlTop
+            // 
+            this.pnlTop.BackColor = System.Drawing.Color.Purple;
+            this.pnlTop.Controls.Add(this.btnRefresh);
+            this.pnlTop.Controls.Add(this.btnNewProduct);
+            this.pnlTop.Controls.Add(this.label4);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(860, 51);
+            this.pnlTop.TabIndex = 0;
             // 
             // label4
             // 
@@ -79,6 +81,25 @@
             this.label4.Text = "TODOS MIS PRODUCTOS";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Purple;
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRefresh.Image = global::app.master.Properties.Resources.Synchronize_32;
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRefresh.Location = new System.Drawing.Point(736, 7);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(121, 38);
+            this.btnRefresh.TabIndex = 8;
+            this.btnRefresh.Text = "actualizar";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // btnNewProduct
             // 
             this.btnNewProduct.BackColor = System.Drawing.Color.Purple;
@@ -89,7 +110,7 @@
             this.btnNewProduct.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnNewProduct.Image = global::app.master.Properties.Resources.New_Ticket_32;
             this.btnNewProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewProduct.Location = new System.Drawing.Point(686, 7);
+            this.btnNewProduct.Location = new System.Drawing.Point(559, 7);
             this.btnNewProduct.Name = "btnNewProduct";
             this.btnNewProduct.Size = new System.Drawing.Size(171, 38);
             this.btnNewProduct.TabIndex = 7;
@@ -119,5 +140,6 @@
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Button btnNewProduct;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

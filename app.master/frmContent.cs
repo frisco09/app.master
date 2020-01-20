@@ -19,7 +19,7 @@ namespace app.master
         public frmContent()
         {
             InitializeComponent();
-            GetProducts();
+            // GetProducts();
         }
 
         private void frmContent_Load(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace app.master
             {
                 // var list = MyModelEntities.Product.OrderBy(e => e.ProductId).ToList();
 
-                productList = MyModelEntities.Product.Include("Categories").ToList();
+                productList = MyModelEntities.Product.Include("Categories").OrderByDescending(pr => pr.ProductId).ToList();
 
                 productControl1.ProductItems = productList;
 
@@ -66,27 +66,29 @@ namespace app.master
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            HidePanel();
+            RemovePanel();
             orderControl1.Visible = true;
             orderControl1.BringToFront();
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            HidePanel();
+            RemovePanel();
             productControl1.Visible = true;
             productControl1.BringToFront();
         }
 
-        private void HidePanel()
+        private void RemovePanel()
         {
             if (orderControl1.Visible)
             {
-                orderControl1.Visible = false;
+                //orderControl1.Visible = false;
+                this.Controls.RemoveByKey(orderControl1.Name);
             }
             if (productControl1.Visible)
             {
                 productControl1.Visible = false;
+                this.Controls.RemoveByKey(productControl1.Name);
             }
         }
         #endregion

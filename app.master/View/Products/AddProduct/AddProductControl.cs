@@ -129,6 +129,8 @@ namespace app.master.View.Products.AddProduct
             _product.QuantityPerUnit = Convert.ToInt32(nudQuantityUnit.Value);
             _product.UnitOrders = Convert.ToInt32(nudUnitOrder.Value);
 
+
+
             using (var MyDbEntities = new AppDBContext())
             {
 
@@ -137,6 +139,19 @@ namespace app.master.View.Products.AddProduct
                     MyDbEntities.Product.Add(_product);
                     MyDbEntities.SaveChanges();
 
+                    // add product-categories relationship
+                    ProductCategory categories = new ProductCategory();
+                    int idcategori = Convert.ToInt32(cbxCategories.SelectedValue);
+                    if (idcategori > 0)
+                    {
+                        categories.CategoryId = idcategori;
+                        categories.ProductId = _product.ProductId;
+
+                    }
+
+                    _product.Categories = new List<ProductCategory>();
+                    _product.Categories.Add(categories);
+                    MyDbEntities.SaveChanges();
                     MessageBox.Show("Information has been Saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -148,8 +163,11 @@ namespace app.master.View.Products.AddProduct
                 }
 
 
+
             }
             this.Parent.Controls.Remove(this);
+
+            //(Parent as ProductControl).PopulateItems();
         }
 
 
