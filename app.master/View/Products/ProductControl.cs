@@ -92,14 +92,16 @@ namespace app.master.View.Products
 
         private void btnNewProduct_Click(object sender, EventArgs e)
         {
+            AddProductDialog frmAddProductDialog = new AddProductDialog();
+            frmAddProductDialog.ShowDialog();
             pnlProductsContainer.Controls.Clear();
             //AddProductControl addProduct = new AddProductControl();
             ////pnlProductsContainer.Controls.Add(addProduct);
             //addProduct.BringToFront();
-            _instanceAddProductControl = null;
-            pnlContainer.Controls.Add(InstanceAddProductControl);
-            InstanceAddProductControl.BringToFront();
-            PopulateItems();
+            //_instanceAddProductControl = null;
+            //pnlContainer.Controls.Add(InstanceAddProductControl);
+            //InstanceAddProductControl.BringToFront();
+            //PopulateItems();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

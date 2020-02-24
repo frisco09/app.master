@@ -243,6 +243,16 @@ namespace app.master.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Reply_Arrow_32 {
+            get {
+                object obj = ResourceManager.GetObject("Reply_Arrow_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Show_Property_48 {
             get {
                 object obj = ResourceManager.GetObject("Show_Property_48", resourceCulture);

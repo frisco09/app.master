@@ -100,6 +100,12 @@
     <Compile Include="View\Products\AddProduct\AddProductControl.Designer.cs">
       <DependentUpon>AddProductControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Products\AddProduct\AddProductDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Products\AddProduct\AddProductDialog.Designer.cs">
+      <DependentUpon>AddProductDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Products\ItemListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Products\AddProduct\AddProductControl.resx">
       <DependentUpon>AddProductControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Products\AddProduct\AddProductDialog.resx">
+      <DependentUpon>AddProductDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Products\ItemListControl.resx">
       <DependentUpon>ItemListControl.cs</DependentUpon>
@@ -170,6 +179,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>appDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Reply_Arrow_32.png" />
     <None Include="Resources\Synchronize_32.png" />
     <None Include="Resources\purple_currency_32.png" />
     <None Include="Resources\peso_32.png" />

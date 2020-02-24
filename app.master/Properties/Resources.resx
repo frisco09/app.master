@@ -136,6 +136,9 @@
   <data name="New_Ticket_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\New_Ticket_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Add_Plus_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add_Plus_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Squared_Menu_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Squared_Menu_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,11 +148,14 @@
   <data name="Brainstorm_Skill_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Brainstorm_Skill_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="default-product" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\default-product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Synchronize_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Synchronize_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Waiter_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Waiter_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="13996757" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\13996757.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,9 +165,6 @@
   </data>
   <data name="Waiter_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Waiter_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Food_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Food_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="food-pattern-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\food-pattern-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,11 +178,11 @@
   <data name="Shutdown_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shutdown_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add_Plus_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add_Plus_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="default-product" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\default-product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="13996757" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\13996757.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Food_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Food_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ok_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ok_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,7 +193,7 @@
   <data name="purple_currency_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\purple_currency_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Synchronize_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Synchronize_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Reply_Arrow_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reply_Arrow_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
