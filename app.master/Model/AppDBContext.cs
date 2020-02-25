@@ -22,6 +22,7 @@ namespace app.master.Model
         public DbSet<Category> Category { get; set; }
         public DbSet<OrderProduct> OrderProduct { get; set; }
         public DbSet<ProductCategory> ProductCategory { get; set; }
+        public DbSet<FileAttach> FileAttach { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -142,6 +143,24 @@ namespace app.master.Model
                 .IsOptional();
             modelBuilder.Entity<ProductCategory>()
                 .HasKey(x => new { x.CategoryId, x.ProductId });
+            #endregion
+
+            #region FileAttach
+            modelBuilder.Entity<FileAttach>()
+                .Property(x => x.Path)
+                .IsRequired();
+            modelBuilder.Entity<FileAttach>()
+                .Property(x => x.CreationTime)
+                .HasColumnType("datetime2")
+                .IsOptional();
+            modelBuilder.Entity<FileAttach>()
+                .Property(x => x.LastModificationTime)
+                .HasColumnType("datetime2")
+                .IsOptional();
+            modelBuilder.Entity<FileAttach>()
+                .Property(x => x.DeletionTime)
+                .HasColumnType("datetime2")
+                .IsOptional();
             #endregion
         }
     }

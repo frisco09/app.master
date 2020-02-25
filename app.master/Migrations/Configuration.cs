@@ -21,13 +21,13 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
             context.Product.AddOrUpdate(
-                new Product { ProductId = 1, Name = "Milanesa napolitana", UnitPrice = 0, Code = "PR01", CreationTime = DateTime.Now },
-                new Product { ProductId = 2, Name = "Hamburguesa simple", UnitPrice = 0, Code = "PR02", CreationTime = DateTime.Now },
-                new Product { ProductId = 3, Name = "Sanguche de vacio", UnitPrice = 0, Code = "PR03", CreationTime = DateTime.Now },
-                new Product { ProductId = 4, Name = "Lomito de ternera", UnitPrice = 0, Code = "PR04", CreationTime = DateTime.Now },
-                new Product { ProductId = 5, Name = "Ensalada rusa", UnitPrice = 0, Code = "PR05", CreationTime = DateTime.Now },
-                new Product { ProductId = 6, Name = "Jugo de naranja", UnitPrice = 0, Code = "PR06", CreationTime = DateTime.Now },
-                new Product { ProductId = 7, Name = "Manaos 5 lts", UnitPrice = 0, Code = "PR07", CreationTime = DateTime.Now }
+                new Product { ProductId = 1, Name = "Milanesa napolitana", UnitPrice = 0, Code = "PR01", AsSale = true, AsInput = false, Observation = "", CreationTime = DateTime.Now },
+                new Product { ProductId = 2, Name = "Hamburguesa simple", UnitPrice = 0, Code = "PR02", AsSale = true, AsInput = false, Observation = "", CreationTime = DateTime.Now },
+                new Product { ProductId = 3, Name = "Sanguche de vacio", UnitPrice = 0, Code = "PR03", AsSale = true, AsInput = false, Observation = "", CreationTime = DateTime.Now },
+                new Product { ProductId = 4, Name = "Lomito de ternera", UnitPrice = 0, Code = "PR04", AsSale = true, AsInput = false, Observation = "", CreationTime = DateTime.Now },
+                new Product { ProductId = 5, Name = "Ensalada rusa", UnitPrice = 0, Code = "PR05", AsSale = true, AsInput = false, Observation = "", CreationTime = DateTime.Now },
+                new Product { ProductId = 6, Name = "Jugo de naranja", UnitPrice = 0, Code = "PR06", AsSale = true, AsInput = false, Observation = "", CreationTime = DateTime.Now },
+                new Product { ProductId = 7, Name = "Manaos 5 lts", UnitPrice = 0, Code = "PR07", AsSale = true, AsInput = false, Observation = "", CreationTime = DateTime.Now }
             );
 
             context.Order.AddOrUpdate(

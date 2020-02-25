@@ -28,16 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductDialog));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.btnFoward = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxData = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txbObservation = new System.Windows.Forms.RichTextBox();
             this.cbxCategories = new System.Windows.Forms.ComboBox();
+            this.txbCodeProduct = new System.Windows.Forms.MaskedTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rbtAsSale = new System.Windows.Forms.RadioButton();
+            this.rbtAsInput = new System.Windows.Forms.RadioButton();
+            this.txbNameProduct = new System.Windows.Forms.MaskedTextBox();
             this.lblAddImage = new System.Windows.Forms.Label();
             this.pbImageProduct = new System.Windows.Forms.PictureBox();
-            this.txbCodeProduct = new System.Windows.Forms.MaskedTextBox();
-            this.txbNameProduct = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.nudProductPrice = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,11 +58,11 @@
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddProduct = new System.Windows.Forms.Button();
-            this.cbxAsInput = new System.Windows.Forms.CheckBox();
-            this.cbxAsSele = new System.Windows.Forms.CheckBox();
-            this.txbObservation = new System.Windows.Forms.MaskedTextBox();
+            this.errorProviderProduct = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlTop.SuspendLayout();
             this.gbxData.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageProduct)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudProductPrice)).BeginInit();
@@ -64,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudUnitOrder)).BeginInit();
             this.pnlFooter.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTop
@@ -109,38 +117,130 @@
             // gbxData
             // 
             this.gbxData.BackColor = System.Drawing.Color.Gainsboro;
-            this.gbxData.Controls.Add(this.txbObservation);
-            this.gbxData.Controls.Add(this.cbxAsSele);
-            this.gbxData.Controls.Add(this.cbxAsInput);
-            this.gbxData.Controls.Add(this.cbxCategories);
+            this.gbxData.Controls.Add(this.panel1);
             this.gbxData.Controls.Add(this.lblAddImage);
             this.gbxData.Controls.Add(this.pbImageProduct);
-            this.gbxData.Controls.Add(this.txbCodeProduct);
-            this.gbxData.Controls.Add(this.txbNameProduct);
             this.gbxData.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxData.Location = new System.Drawing.Point(8, 41);
             this.gbxData.Name = "gbxData";
-            this.gbxData.Size = new System.Drawing.Size(842, 237);
+            this.gbxData.Size = new System.Drawing.Size(842, 270);
             this.gbxData.TabIndex = 8;
             this.gbxData.TabStop = false;
             this.gbxData.Text = "Informacion del Producto";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txbObservation);
+            this.panel1.Controls.Add(this.cbxCategories);
+            this.panel1.Controls.Add(this.txbCodeProduct);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.txbNameProduct);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(3, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(594, 238);
+            this.panel1.TabIndex = 9;
+            // 
+            // txbObservation
+            // 
+            this.txbObservation.BackColor = System.Drawing.Color.Lavender;
+            this.txbObservation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbObservation.Location = new System.Drawing.Point(3, 79);
+            this.txbObservation.MaxLength = 200;
+            this.txbObservation.Name = "txbObservation";
+            this.txbObservation.Size = new System.Drawing.Size(563, 66);
+            this.txbObservation.TabIndex = 12;
+            this.txbObservation.Text = "";
+            this.txbObservation.Enter += new System.EventHandler(this.txbObservation_Enter);
+            this.txbObservation.Leave += new System.EventHandler(this.txbObservation_Leave);
             // 
             // cbxCategories
             // 
             this.cbxCategories.BackColor = System.Drawing.Color.Lavender;
             this.cbxCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategories.FormattingEnabled = true;
-            this.cbxCategories.Location = new System.Drawing.Point(7, 156);
+            this.cbxCategories.Location = new System.Drawing.Point(3, 151);
             this.cbxCategories.Name = "cbxCategories";
-            this.cbxCategories.Size = new System.Drawing.Size(593, 33);
+            this.cbxCategories.Size = new System.Drawing.Size(563, 33);
             this.cbxCategories.TabIndex = 3;
+            // 
+            // txbCodeProduct
+            // 
+            this.txbCodeProduct.BackColor = System.Drawing.Color.Lavender;
+            this.txbCodeProduct.ForeColor = System.Drawing.Color.Gray;
+            this.txbCodeProduct.Location = new System.Drawing.Point(3, 42);
+            this.txbCodeProduct.Name = "txbCodeProduct";
+            this.txbCodeProduct.Size = new System.Drawing.Size(563, 33);
+            this.txbCodeProduct.TabIndex = 6;
+            this.txbCodeProduct.Enter += new System.EventHandler(this.txbCodeProduct_Enter);
+            this.txbCodeProduct.Leave += new System.EventHandler(this.txbCodeProduct_Leave);
+            this.txbCodeProduct.Validating += new System.ComponentModel.CancelEventHandler(this.txbCodeProduct_Validating);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.rbtAsSale);
+            this.panel2.Controls.Add(this.rbtAsInput);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 191);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(594, 47);
+            this.panel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(594, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "*tipo de producto";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // rbtAsSale
+            // 
+            this.rbtAsSale.AutoSize = true;
+            this.rbtAsSale.Location = new System.Drawing.Point(180, 15);
+            this.rbtAsSale.Name = "rbtAsSale";
+            this.rbtAsSale.Size = new System.Drawing.Size(87, 29);
+            this.rbtAsSale.TabIndex = 12;
+            this.rbtAsSale.TabStop = true;
+            this.rbtAsSale.Text = "VENTA";
+            this.rbtAsSale.UseVisualStyleBackColor = true;
+            this.rbtAsSale.Validating += new System.ComponentModel.CancelEventHandler(this.rbtAsSale_Validating);
+            // 
+            // rbtAsInput
+            // 
+            this.rbtAsInput.AutoSize = true;
+            this.rbtAsInput.Location = new System.Drawing.Point(334, 15);
+            this.rbtAsInput.Name = "rbtAsInput";
+            this.rbtAsInput.Size = new System.Drawing.Size(103, 29);
+            this.rbtAsInput.TabIndex = 11;
+            this.rbtAsInput.TabStop = true;
+            this.rbtAsInput.Text = "INSUMO";
+            this.rbtAsInput.UseVisualStyleBackColor = true;
+            this.rbtAsInput.Validating += new System.ComponentModel.CancelEventHandler(this.rbtAsInput_Validating);
+            // 
+            // txbNameProduct
+            // 
+            this.txbNameProduct.BackColor = System.Drawing.Color.Lavender;
+            this.txbNameProduct.ForeColor = System.Drawing.Color.Gray;
+            this.txbNameProduct.Location = new System.Drawing.Point(3, 3);
+            this.txbNameProduct.Name = "txbNameProduct";
+            this.txbNameProduct.Size = new System.Drawing.Size(563, 33);
+            this.txbNameProduct.TabIndex = 5;
+            this.txbNameProduct.Enter += new System.EventHandler(this.txbNameProduct_Enter);
+            this.txbNameProduct.Leave += new System.EventHandler(this.txbNameProduct_Leave);
+            this.txbNameProduct.Validating += new System.ComponentModel.CancelEventHandler(this.txbNameProduct_Validating);
             // 
             // lblAddImage
             // 
             this.lblAddImage.AutoSize = true;
             this.lblAddImage.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddImage.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAddImage.Location = new System.Drawing.Point(603, 207);
+            this.lblAddImage.Location = new System.Drawing.Point(603, 220);
             this.lblAddImage.Name = "lblAddImage";
             this.lblAddImage.Size = new System.Drawing.Size(233, 17);
             this.lblAddImage.TabIndex = 8;
@@ -149,34 +249,13 @@
             // pbImageProduct
             // 
             this.pbImageProduct.Image = global::app.master.Properties.Resources.default_product;
-            this.pbImageProduct.Location = new System.Drawing.Point(606, 23);
+            this.pbImageProduct.Location = new System.Drawing.Point(600, 29);
             this.pbImageProduct.Name = "pbImageProduct";
-            this.pbImageProduct.Size = new System.Drawing.Size(230, 181);
+            this.pbImageProduct.Size = new System.Drawing.Size(236, 188);
             this.pbImageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImageProduct.TabIndex = 7;
             this.pbImageProduct.TabStop = false;
-            // 
-            // txbCodeProduct
-            // 
-            this.txbCodeProduct.BackColor = System.Drawing.Color.Lavender;
-            this.txbCodeProduct.ForeColor = System.Drawing.Color.Gray;
-            this.txbCodeProduct.Location = new System.Drawing.Point(6, 71);
-            this.txbCodeProduct.Name = "txbCodeProduct";
-            this.txbCodeProduct.Size = new System.Drawing.Size(594, 33);
-            this.txbCodeProduct.TabIndex = 6;
-            this.txbCodeProduct.Enter += new System.EventHandler(this.txbCodeProduct_Enter);
-            this.txbCodeProduct.Leave += new System.EventHandler(this.txbCodeProduct_Leave);
-            // 
-            // txbNameProduct
-            // 
-            this.txbNameProduct.BackColor = System.Drawing.Color.Lavender;
-            this.txbNameProduct.ForeColor = System.Drawing.Color.Gray;
-            this.txbNameProduct.Location = new System.Drawing.Point(6, 32);
-            this.txbNameProduct.Name = "txbNameProduct";
-            this.txbNameProduct.Size = new System.Drawing.Size(594, 33);
-            this.txbNameProduct.TabIndex = 5;
-            this.txbNameProduct.Enter += new System.EventHandler(this.txbNameProduct_Enter);
-            this.txbNameProduct.Leave += new System.EventHandler(this.txbNameProduct_Leave);
+            this.pbImageProduct.Click += new System.EventHandler(this.pbImageProduct_Click);
             // 
             // groupBox2
             // 
@@ -191,7 +270,7 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(8, 284);
+            this.groupBox2.Location = new System.Drawing.Point(8, 317);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(842, 155);
             this.groupBox2.TabIndex = 9;
@@ -202,7 +281,7 @@
             // 
             this.nudProductPrice.BackColor = System.Drawing.Color.Lavender;
             this.nudProductPrice.DecimalPlaces = 2;
-            this.nudProductPrice.Location = new System.Drawing.Point(568, 107);
+            this.nudProductPrice.Location = new System.Drawing.Point(521, 109);
             this.nudProductPrice.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -218,7 +297,7 @@
             // label3
             // 
             this.label3.Image = global::app.master.Properties.Resources.purple_currency_32;
-            this.label3.Location = new System.Drawing.Point(531, 108);
+            this.label3.Location = new System.Drawing.Point(484, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 33);
             this.label3.TabIndex = 17;
@@ -284,7 +363,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(629, 68);
+            this.label10.Location = new System.Drawing.Point(581, 76);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(153, 30);
             this.label10.TabIndex = 5;
@@ -337,36 +416,10 @@
             this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // cbxAsInput
+            // errorProviderProduct
             // 
-            this.cbxAsInput.AutoSize = true;
-            this.cbxAsInput.Location = new System.Drawing.Point(153, 195);
-            this.cbxAsInput.Name = "cbxAsInput";
-            this.cbxAsInput.Size = new System.Drawing.Size(129, 29);
-            this.cbxAsInput.TabIndex = 9;
-            this.cbxAsInput.Text = "ES INSUMO";
-            this.cbxAsInput.UseVisualStyleBackColor = true;
-            // 
-            // cbxAsSele
-            // 
-            this.cbxAsSele.AutoSize = true;
-            this.cbxAsSele.Location = new System.Drawing.Point(288, 195);
-            this.cbxAsSele.Name = "cbxAsSele";
-            this.cbxAsSele.Size = new System.Drawing.Size(141, 29);
-            this.cbxAsSele.TabIndex = 10;
-            this.cbxAsSele.Text = "ES DE VENTA";
-            this.cbxAsSele.UseVisualStyleBackColor = true;
-            // 
-            // txbObservation
-            // 
-            this.txbObservation.BackColor = System.Drawing.Color.Lavender;
-            this.txbObservation.ForeColor = System.Drawing.Color.Gray;
-            this.txbObservation.Location = new System.Drawing.Point(6, 117);
-            this.txbObservation.Name = "txbObservation";
-            this.txbObservation.Size = new System.Drawing.Size(594, 33);
-            this.txbObservation.TabIndex = 11;
-            this.txbObservation.Enter += new System.EventHandler(this.txbObservation_Enter);
-            this.txbObservation.Leave += new System.EventHandler(this.txbObservation_Leave);
+            this.errorProviderProduct.ContainerControl = this;
+            this.errorProviderProduct.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderProduct.Icon")));
             // 
             // AddProductDialog
             // 
@@ -386,6 +439,10 @@
             this.pnlTop.ResumeLayout(false);
             this.gbxData.ResumeLayout(false);
             this.gbxData.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageProduct)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -395,6 +452,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudUnitOrder)).EndInit();
             this.pnlFooter.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -423,8 +481,12 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnFoward;
-        private System.Windows.Forms.MaskedTextBox txbObservation;
-        private System.Windows.Forms.CheckBox cbxAsSele;
-        private System.Windows.Forms.CheckBox cbxAsInput;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rbtAsSale;
+        private System.Windows.Forms.RadioButton rbtAsInput;
+        private System.Windows.Forms.RichTextBox txbObservation;
+        private System.Windows.Forms.ErrorProvider errorProviderProduct;
     }
 }

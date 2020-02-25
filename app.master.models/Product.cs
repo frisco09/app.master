@@ -11,13 +11,21 @@ namespace app.master.models
         public int ProductId { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
+        public string Observation { get; set; }
         public int QuantityPerUnit { get; set; }
         public double UnitPrice { get; set; }
         public int UnitInStock { get; set; }
         public int UnitOrders { get; set; }
         public bool Discontinued { get; set; }
+        public bool AsSale { get; set; }
+        public bool AsInput { get; set; }
+
+        public int? FileAttachId { get; set; }
+        public virtual FileAttach FileAttach { get; set; }
 
         public List<OrderProduct> Orders { get; set; }
         public List<ProductCategory> Categories { get; set; }
+
+
     }
 }

@@ -25,7 +25,6 @@ namespace app.master.View.Products.AddProduct
         Product _product = new Product();
         Category _category = new Category();
         List<Category> _categories = new List<Category>();
-        ProductControl parentForm;
 
         public AddProductControl()
         {

@@ -84,6 +84,18 @@
     <Compile Include="Migrations\202001160400287_InitialCreate.designer.cs">
       <DependentUpon>202001160400287_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs" />
+    <Compile Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.designer.cs">
+      <DependentUpon>202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002252122443_AddFileAttachTable.cs" />
+    <Compile Include="Migrations\202002252122443_AddFileAttachTable.designer.cs">
+      <DependentUpon>202002252122443_AddFileAttachTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002252126387_AlterProductSetRelationFileAttach.cs" />
+    <Compile Include="Migrations\202002252126387_AlterProductSetRelationFileAttach.designer.cs">
+      <DependentUpon>202002252126387_AlterProductSetRelationFileAttach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AppDBContext.cs" />
     <Compile Include="Program.cs" />
@@ -123,6 +135,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001160400287_InitialCreate.resx">
       <DependentUpon>202001160400287_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.resx">
+      <DependentUpon>202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002252122443_AddFileAttachTable.resx">
+      <DependentUpon>202002252122443_AddFileAttachTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002252126387_AlterProductSetRelationFileAttach.resx">
+      <DependentUpon>202002252126387_AlterProductSetRelationFileAttach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -217,6 +238,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Media\Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
