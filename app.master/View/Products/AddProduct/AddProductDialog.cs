@@ -26,6 +26,7 @@ namespace app.master.View.Products.AddProduct
         Product _product = new Product();
         Category _category = new Category();
         List<Category> _categories = new List<Category>();
+        OpenFileDialog openFile = new OpenFileDialog();
 
         public AddProductDialog()
         {
@@ -53,6 +54,7 @@ namespace app.master.View.Products.AddProduct
             // For some reason, the ComboBox does not update it Items Collection,
             // then a new DataSource is detected.Invalidate() 
             // forces the Control to redraw iself, and in the process, updating its Items collection.
+
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -101,6 +103,30 @@ namespace app.master.View.Products.AddProduct
 
                             _product.Categories = new List<ProductCategory>();
                             _product.Categories.Add(categories);
+
+                            if (openFile.CheckFileExists)
+                            {
+                                var fileName = $"{Guid.NewGuid().ToString()}{Path.GetExtension(openFile.FileName)}";
+
+                                string fullPath = Path.GetDirectoryName(Application.ExecutablePath);
+                                fullPath = fullPath.Remove(fullPath.IndexOf("\\bin\\Debug"));
+                                string filePath = fullPath + AppConsts.DefaultPathFolderImage + fileName;
+                                System.IO.File.Copy(openFile.FileName, filePath);
+
+                                FileAttach fa = new FileAttach();
+                                fa.FileName = fileName;
+                                fa.Path = filePath;
+                                fa.Type = FileType.ProductImage;
+                                var fileInfo = new FileInfo(filePath);
+                                fa.Size = fileInfo.Length;
+
+                                MyDbEntities.FileAttach.Add(fa);
+                                MyDbEntities.SaveChanges();
+
+                                _product.FileAttachId = fa.FileAttachId;
+                                _product.FileAttach = fa;
+                            }
+
                             MyDbEntities.SaveChanges();
                             MessageBox.Show("Information has been Saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -257,25 +283,15 @@ namespace app.master.View.Products.AddProduct
 
         private void pbImageProduct_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
+            
             openFile.InitialDirectory = "C:\\";
             openFile.Filter = "Image Files(*.jpg; *.jpeg; *.png; *.ico)|*.jpg; *.jpeg; *.png; *.ico";
             openFile.FilterIndex = 1;
-            // openFile.ShowDialog();
-
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 if (openFile.CheckFileExists)
                 {
-                    var fileName = $"{Guid.NewGuid().ToString()}{Path.GetExtension(openFile.FileName)}";
-                    
-                    string fullPath =  Path.GetDirectoryName(Application.ExecutablePath);
-                    fullPath = fullPath.Remove(fullPath.IndexOf("\\bin\\Debug"));
-                    string filePath = fullPath + AppConsts.DefaultPathFolderImage + fileName;
                     pbImageProduct.Image = new Bitmap(openFile.FileName);
-
-                    //System.IO.File.Copy(openFile.FileName, filePath);
-                    //pbImageProduct.Image = Image.FromFile(filePath);
                 }
             }
         }
