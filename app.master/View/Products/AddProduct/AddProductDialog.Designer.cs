@@ -59,6 +59,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.errorProviderProduct = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbxIsActive = new System.Windows.Forms.CheckBox();
             this.pnlTop.SuspendLayout();
             this.gbxData.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -260,6 +261,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox2.Controls.Add(this.cbxIsActive);
             this.groupBox2.Controls.Add(this.nudProductPrice);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.nudQuantityUnit);
@@ -281,7 +283,7 @@
             // 
             this.nudProductPrice.BackColor = System.Drawing.Color.Lavender;
             this.nudProductPrice.DecimalPlaces = 2;
-            this.nudProductPrice.Location = new System.Drawing.Point(521, 109);
+            this.nudProductPrice.Location = new System.Drawing.Point(551, 33);
             this.nudProductPrice.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -289,7 +291,7 @@
             0});
             this.nudProductPrice.Name = "nudProductPrice";
             this.nudProductPrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.nudProductPrice.Size = new System.Drawing.Size(268, 33);
+            this.nudProductPrice.Size = new System.Drawing.Size(285, 33);
             this.nudProductPrice.TabIndex = 18;
             this.nudProductPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudProductPrice.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
@@ -297,7 +299,7 @@
             // label3
             // 
             this.label3.Image = global::app.master.Properties.Resources.purple_currency_32;
-            this.label3.Location = new System.Drawing.Point(484, 110);
+            this.label3.Location = new System.Drawing.Point(514, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 33);
             this.label3.TabIndex = 17;
@@ -363,7 +365,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(581, 76);
+            this.label10.Location = new System.Drawing.Point(629, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(153, 30);
             this.label10.TabIndex = 5;
@@ -420,6 +422,20 @@
             // 
             this.errorProviderProduct.ContainerControl = this;
             this.errorProviderProduct.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderProduct.Icon")));
+            // 
+            // cbxIsActive
+            // 
+            this.cbxIsActive.AutoSize = true;
+            this.cbxIsActive.Checked = true;
+            this.cbxIsActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxIsActive.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 11.75F);
+            this.cbxIsActive.Location = new System.Drawing.Point(629, 78);
+            this.cbxIsActive.Name = "cbxIsActive";
+            this.cbxIsActive.Size = new System.Drawing.Size(153, 25);
+            this.cbxIsActive.TabIndex = 19;
+            this.cbxIsActive.Text = "Habilitar Producto";
+            this.cbxIsActive.UseVisualStyleBackColor = true;
+            this.cbxIsActive.CheckedChanged += new System.EventHandler(this.cbxIsActive_CheckedChanged);
             // 
             // AddProductDialog
             // 
@@ -488,5 +504,6 @@
         private System.Windows.Forms.RadioButton rbtAsInput;
         private System.Windows.Forms.RichTextBox txbObservation;
         private System.Windows.Forms.ErrorProvider errorProviderProduct;
+        private System.Windows.Forms.CheckBox cbxIsActive;
     }
 }

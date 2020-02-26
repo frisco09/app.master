@@ -59,28 +59,60 @@ namespace app.master.View.Products.AddProduct
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            if(validateForm())
+            if (cbxIsActive.Checked)
+            {
+                if(saveProduct())
+                {
+                    MessageBox.Show("Information has been saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("El producto sera registrado pero no podra realizar operaciones de venta o consumo.",
+                "Desea agregar este producto como inhabilitado?",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+                if (result.Equals(DialogResult.Yes))
+                {
+                    if (saveProduct())
+                    {
+                        MessageBox.Show("Information has been saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                }
+            }
+            
+
+        }
+        private bool saveProduct()
+        {
+            if (validateForm())
             {
                 _product.Name = txbNameProduct.Text;
                 _product.Code = txbCodeProduct.Text;
                 _product.Observation = txbObservation.Text;
+                _product.IsActive = cbxIsActive.Checked;
+
                 if (rbtAsInput.Checked)
                 {
                     _product.AsInput = true;
                 }
-                else if(rbtAsSale.Checked)
+                else if (rbtAsSale.Checked)
                 {
                     _product.AsSale = true;
-                } else
+                }
+                else
                 {
                     // MessageBox.Show("Marque el tipo de producto!");
                 }
-            
+
                 _product.UnitPrice = Convert.ToDouble(nudProductPrice.Value);
                 _product.UnitInStock = Convert.ToInt32(nudUnitStock.Value);
                 _product.QuantityPerUnit = Convert.ToInt32(nudQuantityUnit.Value);
                 _product.UnitOrders = Convert.ToInt32(nudUnitOrder.Value);
-                
+
                 using (var MyDbEntities = new AppDBContext())
                 {
 
@@ -103,52 +135,58 @@ namespace app.master.View.Products.AddProduct
 
                             _product.Categories = new List<ProductCategory>();
                             _product.Categories.Add(categories);
-
-                            if (openFile.CheckFileExists)
+                            if (!openFile.FileName.Equals(""))
                             {
-                                var fileName = $"{Guid.NewGuid().ToString()}{Path.GetExtension(openFile.FileName)}";
+                                if (openFile.CheckFileExists)
+                                {
+                                    var fileName = $"{Guid.NewGuid().ToString()}{Path.GetExtension(openFile.FileName)}";
 
-                                string fullPath = Path.GetDirectoryName(Application.ExecutablePath);
-                                fullPath = fullPath.Remove(fullPath.IndexOf("\\bin\\Debug"));
-                                string filePath = fullPath + AppConsts.DefaultPathFolderImage + fileName;
-                                System.IO.File.Copy(openFile.FileName, filePath);
+                                    string fullPath = Path.GetDirectoryName(Application.ExecutablePath);
+                                    fullPath = fullPath.Remove(fullPath.IndexOf("\\bin\\Debug"));
+                                    string filePath = fullPath + AppConsts.DefaultPathFolderImage + fileName;
+                                    System.IO.File.Copy(openFile.FileName, filePath);
 
-                                FileAttach fa = new FileAttach();
-                                fa.FileName = fileName;
-                                fa.Path = filePath;
-                                fa.Type = FileType.ProductImage;
-                                var fileInfo = new FileInfo(filePath);
-                                fa.Size = fileInfo.Length;
+                                    FileAttach file = new FileAttach();
+                                    file.FileName = fileName;
+                                    file.Path = filePath;
+                                    file.Type = FileType.ProductImage;
+                                    var fileInfo = new FileInfo(filePath);
+                                    file.Size = fileInfo.Length;
+                                    file.IsActive = true;
 
-                                MyDbEntities.FileAttach.Add(fa);
-                                MyDbEntities.SaveChanges();
+                                    MyDbEntities.FileAttach.Add(file);
+                                    MyDbEntities.SaveChanges();
 
-                                _product.FileAttachId = fa.FileAttachId;
-                                _product.FileAttach = fa;
+                                    _product.FileAttachId = file.FileAttachId;
+                                    _product.FileAttach = file;
+                                }
                             }
+                            
 
                             MyDbEntities.SaveChanges();
-                            MessageBox.Show("Information has been Saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
                         }
                         catch (Exception exc)
                         {
                             var msj = exc.Message.ToString();
+                            return false;
                         }
                     }
                     else
                     {
-                        MyDbEntities.Entry(_product).State = EntityState.Modified;
-                        MyDbEntities.SaveChanges();
-                        _product.ProductId = 0;
-                        MessageBox.Show("Information has been Updated", "Modified", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return false;
+                        //MyDbEntities.Entry(_product).State = EntityState.Modified;
+                        //MyDbEntities.SaveChanges();
+                        //_product.ProductId = 0;
+                        //MessageBox.Show("Information has been Updated", "Modified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
-                Close();
+
             }
 
+            return false;
         }
-
         #region TODO UI
         private void txbNameProduct_Leave(object sender, EventArgs e)
         {
@@ -274,12 +312,10 @@ namespace app.master.View.Products.AddProduct
         {
             if(ValidateChildren(ValidationConstraints.Enabled))
             {
-                // MessageBox.Show(txbNameProduct.Text, "mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             return false;
         }
-        #endregion
 
         private void pbImageProduct_Click(object sender, EventArgs e)
         {
@@ -295,5 +331,12 @@ namespace app.master.View.Products.AddProduct
                 }
             }
         }
+
+        private void cbxIsActive_CheckedChanged(object sender, EventArgs e)
+        {
+            _product.IsActive = cbxIsActive.Checked;
+        }
+
+        #endregion
     }
 }
