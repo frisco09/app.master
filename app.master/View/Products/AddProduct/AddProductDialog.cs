@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,12 +32,6 @@ namespace app.master.View.Products.AddProduct
             InitializeComponent();
 
         }
-
-
-
-
-
-        
 
         private void AddProductDialog_Load(object sender, EventArgs e)
         {
@@ -83,9 +78,7 @@ namespace app.master.View.Products.AddProduct
                 _product.UnitInStock = Convert.ToInt32(nudUnitStock.Value);
                 _product.QuantityPerUnit = Convert.ToInt32(nudQuantityUnit.Value);
                 _product.UnitOrders = Convert.ToInt32(nudUnitOrder.Value);
-
-
-
+                
                 using (var MyDbEntities = new AppDBContext())
                 {
 
@@ -115,8 +108,6 @@ namespace app.master.View.Products.AddProduct
                         {
                             var msj = exc.Message.ToString();
                         }
-
-
                     }
                     else
                     {
@@ -125,8 +116,6 @@ namespace app.master.View.Products.AddProduct
                         _product.ProductId = 0;
                         MessageBox.Show("Information has been Updated", "Modified", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-
-
 
                 }
                 Close();
@@ -270,9 +259,25 @@ namespace app.master.View.Products.AddProduct
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.InitialDirectory = "C:\\";
-            openFile.Filter = "Image Files (*.jpg) | *jpg | All Files(*.*)|*.*";
+            openFile.Filter = "Image Files(*.jpg; *.jpeg; *.png; *.ico)|*.jpg; *.jpeg; *.png; *.ico";
             openFile.FilterIndex = 1;
-            openFile.ShowDialog();
+            // openFile.ShowDialog();
+
+            if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                if (openFile.CheckFileExists)
+                {
+                    var fileName = $"{Guid.NewGuid().ToString()}{Path.GetExtension(openFile.FileName)}";
+                    
+                    string fullPath =  Path.GetDirectoryName(Application.ExecutablePath);
+                    fullPath = fullPath.Remove(fullPath.IndexOf("\\bin\\Debug"));
+                    string filePath = fullPath + AppConsts.DefaultPathFolderImage + fileName;
+                    pbImageProduct.Image = new Bitmap(openFile.FileName);
+
+                    //System.IO.File.Copy(openFile.FileName, filePath);
+                    //pbImageProduct.Image = Image.FromFile(filePath);
+                }
+            }
         }
     }
 }

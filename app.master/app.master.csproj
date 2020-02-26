@@ -97,6 +97,7 @@
       <DependentUpon>202002252126387_AlterProductSetRelationFileAttach.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\AppConsts.cs" />
     <Compile Include="Model\AppDBContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
