@@ -88,13 +88,9 @@
     <Compile Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.designer.cs">
       <DependentUpon>202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002252122443_AddFileAttachTable.cs" />
-    <Compile Include="Migrations\202002252122443_AddFileAttachTable.designer.cs">
-      <DependentUpon>202002252122443_AddFileAttachTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002252126387_AlterProductSetRelationFileAttach.cs" />
-    <Compile Include="Migrations\202002252126387_AlterProductSetRelationFileAttach.designer.cs">
-      <DependentUpon>202002252126387_AlterProductSetRelationFileAttach.cs</DependentUpon>
+    <Compile Include="Migrations\202002292144010_AlterDBNewFileAttachRelationProduct.cs" />
+    <Compile Include="Migrations\202002292144010_AlterDBNewFileAttachRelationProduct.designer.cs">
+      <DependentUpon>202002292144010_AlterDBNewFileAttachRelationProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AppConsts.cs" />
@@ -140,11 +136,8 @@
     <EmbeddedResource Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.resx">
       <DependentUpon>202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002252122443_AddFileAttachTable.resx">
-      <DependentUpon>202002252122443_AddFileAttachTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002252126387_AlterProductSetRelationFileAttach.resx">
-      <DependentUpon>202002252126387_AlterProductSetRelationFileAttach.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002292144010_AlterDBNewFileAttachRelationProduct.resx">
+      <DependentUpon>202002292144010_AlterDBNewFileAttachRelationProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

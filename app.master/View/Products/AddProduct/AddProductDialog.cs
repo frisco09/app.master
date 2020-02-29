@@ -135,6 +135,8 @@ namespace app.master.View.Products.AddProduct
 
                             _product.Categories = new List<ProductCategory>();
                             _product.Categories.Add(categories);
+                            MyDbEntities.SaveChanges();
+
                             if (!openFile.FileName.Equals(""))
                             {
                                 if (openFile.CheckFileExists)
@@ -153,12 +155,13 @@ namespace app.master.View.Products.AddProduct
                                     var fileInfo = new FileInfo(filePath);
                                     file.Size = fileInfo.Length;
                                     file.IsActive = true;
-
+                                    //file.ProductId = _product.ProductId;
                                     MyDbEntities.FileAttach.Add(file);
                                     MyDbEntities.SaveChanges();
 
-                                    _product.FileAttachId = file.FileAttachId;
-                                    _product.FileAttach = file;
+                                    _product.FileAttaches = new List<FileAttach>();
+                                    _product.FileAttaches.Add(file);
+                                    MyDbEntities.SaveChanges();
                                 }
                             }
                             

@@ -7,13 +7,13 @@ namespace app.master.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class AddFileAttachTable : IMigrationMetadata
+    public sealed partial class AlterDBNewFileAttachRelationProduct : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddFileAttachTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AlterDBNewFileAttachRelationProduct));
         
         string IMigrationMetadata.Id
         {
-            get { return "202002252122443_AddFileAttachTable"; }
+            get { return "202002292144010_AlterDBNewFileAttachRelationProduct"; }
         }
         
         string IMigrationMetadata.Source

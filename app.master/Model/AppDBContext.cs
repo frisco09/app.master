@@ -32,6 +32,9 @@ namespace app.master.Model
 
             # region Product
             modelBuilder.Entity<Product>()
+                .HasMany(p => p.FileAttaches)
+                .WithOptional(p => p.Product);
+            modelBuilder.Entity<Product>()
                 .Property(x => x.Name)
                 .HasMaxLength(55)
                 .IsRequired();
@@ -146,6 +149,9 @@ namespace app.master.Model
             #endregion
 
             #region FileAttach
+            modelBuilder.Entity<FileAttach>()
+                .HasOptional(f => f.Product)
+                .WithMany(f => f.FileAttaches);
             modelBuilder.Entity<FileAttach>()
                 .Property(x => x.Path)
                 .IsRequired();

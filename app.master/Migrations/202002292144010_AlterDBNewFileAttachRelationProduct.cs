@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddFileAttachTable : DbMigration
+    public partial class AlterDBNewFileAttachRelationProduct : DbMigration
     {
         public override void Up()
         {
@@ -25,13 +25,18 @@
                         DeletionTime = c.DateTime(precision: 7, storeType: "datetime2"),
                         IsDeleted = c.Boolean(nullable: false),
                         IsActive = c.Boolean(nullable: false),
+                        Product_ProductId = c.Int(),
                     })
-                .PrimaryKey(t => t.FileAttachId);
+                .PrimaryKey(t => t.FileAttachId)
+                .ForeignKey("dbo.Product", t => t.Product_ProductId)
+                .Index(t => t.Product_ProductId);
             
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.FileAttach", "Product_ProductId", "dbo.Product");
+            DropIndex("dbo.FileAttach", new[] { "Product_ProductId" });
             DropTable("dbo.FileAttach");
         }
     }

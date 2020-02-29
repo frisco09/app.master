@@ -9,6 +9,7 @@ using app.master.Model;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using app.master.View.Products.AddProduct;
+using System.Drawing;
 
 namespace app.master.View.Products
 {
@@ -51,7 +52,9 @@ namespace app.master.View.Products
                 pnlProductsContainer.Controls.Clear();
                 _ProductItems = new List<Product>();
                 _ProductItems.Clear();
-                _ProductItems = MyModelEntities.Product.Include("Categories").OrderByDescending(pr => pr.ProductId).ToList();
+                _ProductItems = MyModelEntities.Product
+                    .Include("Categories")
+                    .Include("FileAttaches").OrderByDescending(pr => pr.ProductId).ToList();
             
                 if (_ProductItems != null)
                 {
@@ -63,6 +66,7 @@ namespace app.master.View.Products
                            item.Name = product.Name;
                            item.Stock = product.UnitInStock;
                            item.Price = product.UnitPrice;
+
                            if (product.Categories.Count > 0)
                            {
                                List<int> categoriesIDS = new List<int>();
@@ -72,6 +76,18 @@ namespace app.master.View.Products
                                }
                                item.Categories = categoriesIDS;
                            }
+
+                            if (product.FileAttaches.Count > 0)
+                            {
+                                foreach (var fa in product.FileAttaches)
+                                {
+                                    if (fa.IsActive)
+                                    {
+                                        Image image = Image.FromFile(fa.Path);
+                                        item.Image = image;
+                                    }
+                                }
+                            }
                     
                               pnlProductsContainer.Controls.Add(item);
                         }

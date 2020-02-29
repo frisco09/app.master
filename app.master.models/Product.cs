@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +20,8 @@ namespace app.master.models
         public bool Discontinued { get; set; }
         public bool AsSale { get; set; }
         public bool AsInput { get; set; }
-
-        public int? FileAttachId { get; set; }
-        public virtual FileAttach FileAttach { get; set; }
-
+        
+        public List<FileAttach> FileAttaches { get; set; }
         public List<OrderProduct> Orders { get; set; }
         public List<ProductCategory> Categories { get; set; }
 
