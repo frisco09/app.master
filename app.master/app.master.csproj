@@ -80,18 +80,6 @@
     <Compile Include="frmContent.Designer.cs">
       <DependentUpon>frmContent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001160400287_InitialCreate.cs" />
-    <Compile Include="Migrations\202001160400287_InitialCreate.designer.cs">
-      <DependentUpon>202001160400287_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs" />
-    <Compile Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.designer.cs">
-      <DependentUpon>202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002292144010_AlterDBNewFileAttachRelationProduct.cs" />
-    <Compile Include="Migrations\202002292144010_AlterDBNewFileAttachRelationProduct.designer.cs">
-      <DependentUpon>202002292144010_AlterDBNewFileAttachRelationProduct.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AppConsts.cs" />
     <Compile Include="Model\AppDBContext.cs" />
@@ -130,15 +118,6 @@
     <EmbeddedResource Include="frmContent.resx">
       <DependentUpon>frmContent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001160400287_InitialCreate.resx">
-      <DependentUpon>202001160400287_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.resx">
-      <DependentUpon>202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002292144010_AlterDBNewFileAttachRelationProduct.resx">
-      <DependentUpon>202002292144010_AlterDBNewFileAttachRelationProduct.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -163,6 +142,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Products\ProductControl.resx">
       <DependentUpon>ProductControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -187,13 +167,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="appDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="appDB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>appDB.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\Reply_Arrow_32.png" />
     <None Include="Resources\Synchronize_32.png" />
     <None Include="Resources\purple_currency_32.png" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace app.master.models
 {
-    public partial class Product : EntityBase
+    public class Product : EntityBase
     {
         public int ProductId { get; set; }
         public string Name { get; set; }

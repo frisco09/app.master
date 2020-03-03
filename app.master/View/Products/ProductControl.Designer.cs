@@ -34,7 +34,6 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnNewProduct = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pnlContainer.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +51,7 @@
             // pnlProductsContainer
             // 
             this.pnlProductsContainer.AutoScroll = true;
+            this.pnlProductsContainer.BackColor = System.Drawing.Color.Snow;
             this.pnlProductsContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlProductsContainer.Location = new System.Drawing.Point(0, 64);
             this.pnlProductsContainer.Name = "pnlProductsContainer";
@@ -60,8 +60,7 @@
             // 
             // pnlTop
             // 
-            this.pnlTop.BackColor = System.Drawing.Color.Silver;
-            this.pnlTop.Controls.Add(this.materialSingleLineTextField1);
+            this.pnlTop.BackColor = System.Drawing.Color.Snow;
             this.pnlTop.Controls.Add(this.btnRefresh);
             this.pnlTop.Controls.Add(this.btnNewProduct);
             this.pnlTop.Controls.Add(this.label4);
@@ -90,12 +89,12 @@
             // 
             // btnNewProduct
             // 
-            this.btnNewProduct.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnNewProduct.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnNewProduct.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
             this.btnNewProduct.FlatAppearance.BorderSize = 0;
             this.btnNewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewProduct.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewProduct.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnNewProduct.ForeColor = System.Drawing.Color.GhostWhite;
             this.btnNewProduct.Image = global::app.master.Properties.Resources.New_Ticket_32;
             this.btnNewProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNewProduct.Location = new System.Drawing.Point(661, 3);
@@ -110,33 +109,14 @@
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.SeaGreen;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(294, 64);
             this.label4.TabIndex = 5;
             this.label4.Text = "TODOS MIS PRODUCTOS";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // materialSingleLineTextField1
-            // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialSingleLineTextField1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.materialSingleLineTextField1.Hint = "ingrese un valor de busqueda y precione enter";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(284, 21);
-            this.materialSingleLineTextField1.MaxLength = 32767;
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(371, 23);
-            this.materialSingleLineTextField1.TabIndex = 9;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
             // 
             // ProductControl
             // 
@@ -160,6 +140,5 @@
         private System.Windows.Forms.Button btnNewProduct;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRefresh;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
     }
 }

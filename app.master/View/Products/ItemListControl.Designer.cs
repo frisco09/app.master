@@ -32,13 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbxImageProduct = new System.Windows.Forms.PictureBox();
             this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblProductPrice = new MaterialSkin.Controls.MaterialLabel();
-            this.lblProductStock = new MaterialSkin.Controls.MaterialLabel();
-            this.lblCategories = new MaterialSkin.Controls.MaterialLabel();
+            this.lblProductPrice = new System.Windows.Forms.Label();
             this.lblProductName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblProductStock = new System.Windows.Forms.Label();
+            this.lblCategories = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImageProduct)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -46,7 +46,7 @@
             // 
             // pnlFooterLine
             // 
-            this.pnlFooterLine.BackColor = System.Drawing.Color.LightGreen;
+            this.pnlFooterLine.BackColor = System.Drawing.Color.RoyalBlue;
             this.pnlFooterLine.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooterLine.Location = new System.Drawing.Point(0, 96);
             this.pnlFooterLine.Name = "pnlFooterLine";
@@ -55,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.pbxImageProduct);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -84,38 +84,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(728, 29);
             this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Nombre del Producto";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(111, 32);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(125, 19);
-            this.materialLabel1.TabIndex = 4;
-            this.materialLabel1.Text = "Stock disponible:";
-            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(157, 52);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(82, 19);
-            this.materialLabel3.TabIndex = 6;
-            this.materialLabel3.Text = "Categoria: ";
-            this.materialLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel1
             // 
@@ -128,68 +97,81 @@
             // 
             // lblProductPrice
             // 
-            this.lblProductPrice.Depth = 0;
-            this.lblProductPrice.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblProductPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblProductPrice.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductPrice.ForeColor = System.Drawing.Color.DarkGreen;
             this.lblProductPrice.Location = new System.Drawing.Point(3, 0);
-            this.lblProductPrice.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblProductPrice.Name = "lblProductPrice";
-            this.lblProductPrice.Size = new System.Drawing.Size(149, 64);
+            this.lblProductPrice.Size = new System.Drawing.Size(149, 67);
             this.lblProductPrice.TabIndex = 0;
-            this.lblProductPrice.Text = "$nn.nn";
+            this.lblProductPrice.Text = "$0000";
             this.lblProductPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblProductStock
-            // 
-            this.lblProductStock.AutoSize = true;
-            this.lblProductStock.BackColor = System.Drawing.Color.Transparent;
-            this.lblProductStock.Depth = 0;
-            this.lblProductStock.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblProductStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblProductStock.Location = new System.Drawing.Point(242, 32);
-            this.lblProductStock.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblProductStock.Name = "lblProductStock";
-            this.lblProductStock.Size = new System.Drawing.Size(49, 19);
-            this.lblProductStock.TabIndex = 9;
-            this.lblProductStock.Text = "nnnnn";
-            this.lblProductStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblCategories
-            // 
-            this.lblCategories.AutoSize = true;
-            this.lblCategories.BackColor = System.Drawing.Color.Transparent;
-            this.lblCategories.Depth = 0;
-            this.lblCategories.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCategories.Location = new System.Drawing.Point(242, 52);
-            this.lblCategories.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCategories.Name = "lblCategories";
-            this.lblCategories.Size = new System.Drawing.Size(49, 19);
-            this.lblCategories.TabIndex = 10;
-            this.lblCategories.Text = "nnnnn";
-            this.lblCategories.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
             this.lblProductName.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductName.ForeColor = System.Drawing.Color.DimGray;
-            this.lblProductName.Location = new System.Drawing.Point(281, 3);
+            this.lblProductName.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblProductName.Location = new System.Drawing.Point(117, 0);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(61, 25);
             this.lblProductName.TabIndex = 11;
             this.lblProductName.Text = "label1";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(117, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 25);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Stock disponible:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(117, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 25);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Categoria: ";
+            // 
+            // lblProductStock
+            // 
+            this.lblProductStock.AutoSize = true;
+            this.lblProductStock.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductStock.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblProductStock.Location = new System.Drawing.Point(268, 46);
+            this.lblProductStock.Name = "lblProductStock";
+            this.lblProductStock.Size = new System.Drawing.Size(70, 21);
+            this.lblProductStock.TabIndex = 14;
+            this.lblProductStock.Text = "NNNNN";
+            // 
+            // lblCategories
+            // 
+            this.lblCategories.AutoSize = true;
+            this.lblCategories.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategories.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblCategories.Location = new System.Drawing.Point(214, 71);
+            this.lblCategories.Name = "lblCategories";
+            this.lblCategories.Size = new System.Drawing.Size(70, 21);
+            this.lblCategories.TabIndex = 15;
+            this.lblCategories.Text = "NNNNN";
+            // 
             // ItemListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblProductName);
+            this.BackColor = System.Drawing.Color.Snow;
             this.Controls.Add(this.lblCategories);
             this.Controls.Add(this.lblProductStock);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblProductName);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlFooterLine);
@@ -209,12 +191,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbxImageProduct;
         private MaterialSkin.Controls.MaterialLabel lblTitle;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private MaterialSkin.Controls.MaterialLabel lblProductPrice;
-        private MaterialSkin.Controls.MaterialLabel lblProductStock;
-        private MaterialSkin.Controls.MaterialLabel lblCategories;
         private System.Windows.Forms.Label lblProductName;
+        private System.Windows.Forms.Label lblProductPrice;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblProductStock;
+        private System.Windows.Forms.Label lblCategories;
     }
 }

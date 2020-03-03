@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmContent));
             this.drawer = new System.Windows.Forms.Panel();
             this.btnAboutThis = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnAdmin = new MaterialSkin.Controls.MaterialFlatButton();
@@ -38,10 +39,13 @@
             this.conten = new System.Windows.Forms.Panel();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.orderControl1 = new app.master.View.Orders.OrderControl();
-            this.productControl1 = new app.master.View.Products.ProductControl();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.btnShutdown = new MaterialSkin.Controls.MaterialFlatButton();
+            this.productControl1 = new app.master.View.Products.ProductControl();
+            this.productControl2 = new app.master.View.Products.ProductControl();
+            this.productControl3 = new app.master.View.Products.ProductControl();
+            this.productControl4 = new app.master.View.Products.ProductControl();
             this.drawer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.conten.SuspendLayout();
@@ -175,7 +179,6 @@
             // 
             this.pnlContainer.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.pnlContainer.Controls.Add(this.orderControl1);
-            this.pnlContainer.Controls.Add(this.productControl1);
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(0, 39);
             this.pnlContainer.Name = "pnlContainer";
@@ -184,20 +187,11 @@
             // 
             // orderControl1
             // 
-            this.orderControl1.Location = new System.Drawing.Point(0, 0);
+            this.orderControl1.Location = new System.Drawing.Point(0, 224);
             this.orderControl1.Name = "orderControl1";
             this.orderControl1.Size = new System.Drawing.Size(860, 561);
             this.orderControl1.TabIndex = 1;
             this.orderControl1.Visible = false;
-            // 
-            // productControl1
-            // 
-            this.productControl1.Location = new System.Drawing.Point(0, 0);
-            this.productControl1.Name = "productControl1";
-            this.productControl1.ProductItems = null;
-            this.productControl1.Size = new System.Drawing.Size(860, 561);
-            this.productControl1.TabIndex = 0;
-            this.productControl1.Visible = false;
             // 
             // pnlHeader
             // 
@@ -241,6 +235,34 @@
             this.btnShutdown.UseVisualStyleBackColor = false;
             this.btnShutdown.Click += new System.EventHandler(this.btnShutdown_Click);
             // 
+            // productControl1
+            // 
+            this.productControl1.Location = new System.Drawing.Point(0, 0);
+            this.productControl1.Name = "productControl1";
+            this.productControl1.Size = new System.Drawing.Size(860, 561);
+            this.productControl1.TabIndex = 0;
+            // 
+            // productControl2
+            // 
+            this.productControl2.Location = new System.Drawing.Point(0, 0);
+            this.productControl2.Name = "productControl2";
+            this.productControl2.Size = new System.Drawing.Size(860, 561);
+            this.productControl2.TabIndex = 0;
+            // 
+            // productControl3
+            // 
+            this.productControl3.Location = new System.Drawing.Point(0, 0);
+            this.productControl3.Name = "productControl3";
+            this.productControl3.Size = new System.Drawing.Size(860, 561);
+            this.productControl3.TabIndex = 0;
+            // 
+            // productControl4
+            // 
+            this.productControl4.Location = new System.Drawing.Point(0, 0);
+            this.productControl4.Name = "productControl4";
+            this.productControl4.Size = new System.Drawing.Size(860, 561);
+            this.productControl4.TabIndex = 0;
+            // 
             // frmContent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,8 +301,11 @@
         private MaterialSkin.Controls.MaterialFlatButton btnAboutThis;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.Panel pnlContainer;
-        private View.Products.ProductControl productControl1;
         private View.Orders.OrderControl orderControl1;
+        private View.Products.ProductControl productControl1;
+        private View.Products.ProductControl productControl2;
+        private View.Products.ProductControl productControl3;
+        private View.Products.ProductControl productControl4;
     }
 }
 

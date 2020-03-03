@@ -14,6 +14,8 @@ namespace app.master.Model
     {
         public AppDBContext() : base("appDB")
         {
+            Database.SetInitializer(new CreateDatabaseIfNotExists<AppDBContext>());
+            Database.Initialize(true);
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDBContext, Migration.Configuration>("AppDBConnectionString"));
         }
 
