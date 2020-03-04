@@ -88,9 +88,9 @@
     <Compile Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.designer.cs">
       <DependentUpon>202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002292144010_AlterDBNewFileAttachRelationProduct.cs" />
-    <Compile Include="Migrations\202002292144010_AlterDBNewFileAttachRelationProduct.designer.cs">
-      <DependentUpon>202002292144010_AlterDBNewFileAttachRelationProduct.cs</DependentUpon>
+    <Compile Include="Migrations\202003032357116_CreateProductFileAttachRelation.cs" />
+    <Compile Include="Migrations\202003032357116_CreateProductFileAttachRelation.designer.cs">
+      <DependentUpon>202003032357116_CreateProductFileAttachRelation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AppConsts.cs" />
@@ -136,8 +136,8 @@
     <EmbeddedResource Include="Migrations\202002242121221_AlterProductTableSetBoolTypeAndObservationValues.resx">
       <DependentUpon>202002242121221_AlterProductTableSetBoolTypeAndObservationValues.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002292144010_AlterDBNewFileAttachRelationProduct.resx">
-      <DependentUpon>202002292144010_AlterDBNewFileAttachRelationProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003032357116_CreateProductFileAttachRelation.resx">
+      <DependentUpon>202003032357116_CreateProductFileAttachRelation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -187,13 +187,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="appDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="appDB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>appDB.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\Reply_Arrow_32.png" />
     <None Include="Resources\Synchronize_32.png" />
     <None Include="Resources\purple_currency_32.png" />
